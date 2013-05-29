@@ -75,8 +75,6 @@ class MainWindow(wx.Frame):
         # pad with zeros!
         paddata = self.GetPadData()
         fout.write(indata + paddata)
-        print "i got here"
-        pass
 
     def OnChangePadSize(self,e):
         self.UpdatePadSize()
