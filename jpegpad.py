@@ -1,4 +1,3 @@
-#! /usr/bin/env python
 import wx
 from const import *
 import os
@@ -30,7 +29,7 @@ class MainWindow(wx.Frame):
         text2 = wx.StaticText(self, label="Kilobytes to pad",
                               pos=(20,130))
         self.pad = wx.SpinCtrl(self, -1, '', (160, 126), (60, -1))
-        self.pad.SetRange(0,1000000)
+        self.pad.SetRange(0,1000)
         self.pad.SetValue(100)
         self.Bind(wx.EVT_SPINCTRL, self.OnChangePadSize, self.pad)
         self.Bind(wx.EVT_TEXT, self.OnChangePadSize, self.pad)        
@@ -55,7 +54,7 @@ class MainWindow(wx.Frame):
         self.SetTitle()
 
     def GetPadData(self):
-        padstring = open('dickens-old-628.txt').read(self.pad.GetValue()*1024)
+        padstring = open('curio10.txt').read(self.pad.GetValue()*1024)
         return padstring
 
     def OnPad(self,e):
@@ -152,10 +151,8 @@ class MainWindow(wx.Frame):
             self.editfile.SetValue(self.filename)
         dlg.Destroy()
 
-    def OnOpen(self,e):
-        """Open a file"""
-
-app = wx.App(False)
-frame = MainWindow(None)
-frame.Show()
-app.MainLoop()
+if __name__ == "__main__":
+    app = wx.App(False)
+    frame = MainWindow(None)
+    frame.Show()
+    app.MainLoop()
