@@ -1,4 +1,26 @@
+jpegpad
+Copyright (c) 2013 James Mithen
+
+Introduction
+------------
 jpegpad is a program for 'inverse image compression'
+It was designed to make jpeg images larger (in bytes)
+but with no increase in quality!  It will in fact
+make any file larger, but there is no guarantee that
+this will be useful.
 
-LICENSE
+Requirements
+------------
+Python (tested with 2.7.3)
+wxPython (tested with version 2.8.12.1)
 
+Running
+-------
+python jpegappend.py
+
+License
+-------
+- jpegpad.py is provided under the GPL version 3
+- curio10.txt is the text of "The Old Curiosity Shop"
+  by Charles Dickens, from Project Gutenberg, and is
+  declared as being in the "public domain" (see curio10.txt)
